@@ -7,16 +7,16 @@ public class House {
         int height = 90;
     }
 
-    private class TheStairs{
+    private class TheStairs {
         int stepWidth = 65;
         int quantitySteps = 11;
         String colorStairs = "dark walnut";
     }
 
-    private class AirConditioner{
+    private class AirConditioner {
         String title = "Gree";
         double power = 2.5;
-        boolean inverterModification =true;
+        boolean inverterModification = true;
 
     }
 
