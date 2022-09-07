@@ -1,6 +1,7 @@
 package com.hillelPro.havhun.homework3;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class User {
     private String name;
@@ -9,6 +10,7 @@ public class User {
     private String password;
     private String sex;
     private String country;
+
 
     public String getName() {
         return name;
@@ -81,7 +83,7 @@ public class User {
         return Objects.hash(name, surname, email, password, sex, country);
     }
 
-    public static  void print(String name, String surname, String email, String password, String sex, String country){
+    public static void print(String name, String surname, String email, String password, String sex, String country) {
         System.out.println("name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
@@ -90,5 +92,15 @@ public class User {
                 ", country='" + country + '\'');
     }
 
+    public static void read(String str) {
+        System.out.println("Сообщение принято " + str);
 
+    }
+
+    public static void write() {
+        System.out.println("Введите текст");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ваш текст: " + scanner);
+        scanner.close();
+    }
 }
