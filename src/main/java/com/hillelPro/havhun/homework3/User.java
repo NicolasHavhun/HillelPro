@@ -60,6 +60,40 @@ public class User {
         this.country = country;
     }
 
+    public User() {
+    }
+
+    public User(String name) {
+        this.name = name;
+
+    }
+
+    public User(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public User(String name, String surname, String email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+    }
+
+    public User(String name, String surname, String email, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(String name, String surname, String email, String password, String sex) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.sex = sex;
+    }
+
     public User(String name, String surname, String email, String password, String sex, String country) {
         this.name = name;
         this.surname = surname;
@@ -68,7 +102,6 @@ public class User {
         this.sex = sex;
         this.country = country;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -83,7 +116,7 @@ public class User {
         return Objects.hash(name, surname, email, password, sex, country);
     }
 
-    public static void print(String name, String surname, String email, String password, String sex, String country) {
+    public static void printInformation(String name, String surname, String email, String password, String sex, String country) {
         System.out.println("name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
@@ -92,15 +125,34 @@ public class User {
                 ", country='" + country + '\'');
     }
 
-    public static void read(String str) {
-        System.out.println("Сообщение принято " + str);
+    public static void read(String stringExample) {
+        System.out.println('\''+"Чатаю "+'\''+" + " + stringExample);
 
     }
+
+    public String firstString = "Восьмая джава это круто!\n" +
+            "Она продвинута весьма\n" +
+            "Аж даже final добавляет\n" +
+            "Сама";
+
+    public String secondString = "джава";
 
     public static void write() {
-        System.out.println("Введите текст");
+        System.out.println("Напиши в консоли твое имя");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ваш текст: " + scanner);
-        scanner.close();
+        if (scanner.hasNextLine()) {
+            String textWrite = scanner.nextLine();
+            System.out.println("Твое имя: " + textWrite);
+
+        } else {
+            System.out.println("Wrong Data");
+            System.exit(0);
+
+            scanner.close();
+
+        }
+
     }
+
 }
+
