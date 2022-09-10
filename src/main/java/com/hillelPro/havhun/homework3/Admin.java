@@ -13,7 +13,7 @@ public class Admin extends User {
 
     public static void deleteSubstring(String firstString){
 
-        //Тут чтобы не удалять чатсь текста я отступил от условий задания и симпровизтровал
+        //Тут чтобы не удалять часть стиха я отступил от условий задания и симпровизировал
         String value = firstString.replace("final", "public");
         System.out.println(value);
     }
