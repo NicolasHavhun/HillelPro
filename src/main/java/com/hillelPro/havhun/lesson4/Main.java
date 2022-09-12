@@ -24,7 +24,9 @@ public class Main {
         firemen.study();
         firemen.same();
 
-      //  AbstractExample.AbstractExampleClas abstractExampleClas = new AbstractExample.AbstractExampleClas();
+        Men men = new Men();
+        men.work();
+        //  AbstractExample.AbstractExampleClas abstractExampleClas = new AbstractExample.AbstractExampleClas();
 
     }
 }
