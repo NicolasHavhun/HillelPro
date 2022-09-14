@@ -1,16 +1,14 @@
 package com.hillelPro.havhun.homework2;
 
-public class PartTwoClass {
-    final int CONSTANT_ONE = 25;
-    final double CONSTANT_TWO = 9.8;
-    final boolean CONSTANT_THREE = false;
+public class PartTwo {
+
+    final int CONSTANT_ONE;
+    final double CONSTANT_TWO;
+    final boolean CONSTANT_THREE;
 
 
-    public PartTwoClass() {
-    }
+    // Пустой конструктор нельзя создать, так как все поля надо заполнить через конструктор со всеми параметрами.
 
-    //В связи с тем, что к параметрам класса присвоен модификатор доступа final, эти параметры не могут быть изменены, переназначены.
-    // Поэтому конструктор с параметрами final создать нельзя.
     // Setter от поля final создать нельзя.
 
     // public PartTwoClass(int CONSTANT_ONE) {
@@ -22,11 +20,13 @@ public class PartTwoClass {
     // this.double CONSTANT_TWO = CONSTANT_TWO;
     // }
 
-    // public PartTwoClass(int CONSTANT_ONE, double CONSTANT_TWO, boolean CONSTANT_THREE) {
-    // this.int CONSTANT_ONE = CONSTANT_ONE;
-    // this.double CONSTANT_TWO = CONSTANT_TWO;
-    // this.boolean CONSTANT_THREE = CONSTANT_THREE;
-    // }
+    public PartTwo(int CONSTANT_ONE, double CONSTANT_TWO, boolean CONSTANT_THREE, int constant_one, double constant_two, boolean constant_three) {
+        this.CONSTANT_ONE = constant_one;
+        this.CONSTANT_TWO = constant_two;
+        this.CONSTANT_THREE = constant_three;
+
+    }
+
     public int getCONSTANT_ONE() {
         return CONSTANT_ONE;
     }
@@ -53,3 +53,4 @@ public class PartTwoClass {
 
 
 }
+

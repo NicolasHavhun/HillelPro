@@ -1,7 +1,7 @@
 package com.hillelPro.havhun.homework2;
 
-public class homework2 {
-    public class PartOne {
+public class PartOne {
+
         byte primitiveOne = 127;
         short primitiveTwo = -32766;
         long primitiveThree = -9200000000000000000l;
@@ -161,4 +161,4 @@ public class homework2 {
 
     }
 
-}
+
