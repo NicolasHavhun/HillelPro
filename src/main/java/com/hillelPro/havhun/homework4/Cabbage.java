@@ -50,6 +50,9 @@ final class Cabbage extends Brassica implements BrassicaGrows {
         this.cabbageName = cabbageName;
     }
 
+    public Cabbage() {
+    }
+
     public Cabbage(String cabbageName, boolean live, boolean die, boolean showGreen, boolean reproduce, int numberOfDaysMaturation, double weightOfFruit) {
         super(live, die, showGreen, reproduce, numberOfDaysMaturation, weightOfFruit);
         this.cabbageName = cabbageName;

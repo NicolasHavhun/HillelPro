@@ -40,10 +40,19 @@ final class BrusselsSprout extends Brassica implements BrassicaGrows {
         System.out.println("Brussels Sprout Need to Water");
     }
 
+    public BrusselsSprout() {
+    }
+
     public BrusselsSprout(String brusselsSproutName, boolean live, boolean die, boolean showGreen, boolean reproduce, int numberOfDaysMaturation, double weightOfFruit) {
         super(live, die, showGreen, reproduce, numberOfDaysMaturation, weightOfFruit);
         this.brusselsSproutName= brusselsSproutName;
     }
 
+    public String getBrusselsSproutName() {
+        return brusselsSproutName;
+    }
 
+    public void setBrusselsSproutName(String brusselsSproutName) {
+        this.brusselsSproutName = brusselsSproutName;
+    }
 }

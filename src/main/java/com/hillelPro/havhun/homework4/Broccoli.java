@@ -41,9 +41,20 @@ final class Broccoli extends Brassica implements BrassicaGrows {
         System.out.println("Broccoli Need to Water");
     }
 
+    public Broccoli() {
+    }
+
     public Broccoli(String broccoliName, boolean live, boolean die, boolean showGreen, boolean reproduce, int numberOfDaysMaturation, double weightOfFruit) {
         super(live, die, showGreen, reproduce, numberOfDaysMaturation, weightOfFruit);
         this.broccoliName=broccoliName;
+    }
+
+    public String getBroccoliName() {
+        return broccoliName;
+    }
+
+    public void setBroccoliName(String broccoliName) {
+        this.broccoliName = broccoliName;
     }
 }
 
