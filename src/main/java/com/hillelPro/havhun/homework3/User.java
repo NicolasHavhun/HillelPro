@@ -11,6 +11,56 @@ public class User {
     private String sex;
     private String country;
 
+    public String firstString = "Восьмая джава это круто!\n" +
+            "Она продвинута весьма\n" +
+            "Аж даже final добавляет\n" +
+            "Сама";
+
+    public String secondString = "джава";
+
+    public User() {
+    }
+
+    public User(String name) {
+        this.name = name;
+
+    }
+
+    public User(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public User(String name, String surname, String email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+    }
+
+    public User(String name, String surname, String email, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(String name, String surname, String email, String password, String sex) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.sex = sex;
+    }
+
+    public User(String name, String surname, String email, String password, String sex, String country) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.sex = sex;
+        this.country = country;
+    }
+
 
     public String getName() {
         return name;
@@ -60,49 +110,6 @@ public class User {
         this.country = country;
     }
 
-    public User() {
-    }
-
-    public User(String name) {
-        this.name = name;
-
-    }
-
-    public User(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-
-    public User(String name, String surname, String email) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-    }
-
-    public User(String name, String surname, String email, String password) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-    }
-
-    public User(String name, String surname, String email, String password, String sex) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.sex = sex;
-    }
-
-    public User(String name, String surname, String email, String password, String sex, String country) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.sex = sex;
-        this.country = country;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -126,16 +133,8 @@ public class User {
     }
 
     public static void read(String stringExample) {
-        System.out.println('\''+"Чатаю "+'\''+" + " + stringExample);
-
+        System.out.println('\'' + "Чатаю " + '\'' + " + " + stringExample);
     }
-
-    public String firstString = "Восьмая джава это круто!\n" +
-            "Она продвинута весьма\n" +
-            "Аж даже final добавляет\n" +
-            "Сама";
-
-    public String secondString = "джава";
 
     public static void write() {
         System.out.println("Напиши в консоли твое имя");
@@ -147,12 +146,8 @@ public class User {
         } else {
             System.out.println("Wrong Data");
             System.exit(0);
-
             scanner.close();
-
         }
-
     }
-
 }
 

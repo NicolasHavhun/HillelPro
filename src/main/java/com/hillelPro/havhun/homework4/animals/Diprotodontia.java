@@ -1,6 +1,6 @@
 package com.hillelPro.havhun.homework4.animals;
 
-public abstract class Diprotodontia extends Animals {
+public abstract class Diprotodontia extends Animal {
    boolean sleep;
    boolean eat;
     @Override

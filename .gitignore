@@ -1,2 +1,5 @@
 # Project exclude paths
-/out/
+*.xml
+*.iml
+out/
+src/main/java/com/hillelPro/havhun/ignored/ignor.txt

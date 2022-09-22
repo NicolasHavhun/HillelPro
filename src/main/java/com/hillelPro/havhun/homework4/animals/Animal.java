@@ -1,15 +1,15 @@
 package com.hillelPro.havhun.homework4.animals;
 
-public abstract class Animals {
+public abstract class Animal {
     public boolean live;
     public boolean die;
 
     public abstract void born();
 
-    public Animals() {
+    public Animal() {
     }
 
-    public Animals(boolean live, boolean die) {
+    public Animal(boolean live, boolean die) {
         this.live = live;
         this.die = die;
     }
