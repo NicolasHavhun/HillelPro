@@ -14,7 +14,7 @@ public class ExceptionServise {
         throw new RuntimeException();
     }
     public  void throwTwoCheckedException() throws AcceptPendingException, FileSystemException{
-        int anInt = new Random().nextInt();
+        int anInt = 1;
         if (anInt<0){
             throw new AcceptPendingException();
         } else {

@@ -14,7 +14,7 @@ public class Main {
         ExceptionServise exceptionServise = new ExceptionServise();
 //        exceptionServise.throwCheckedException();
 
-//        exceptionServise.throwUncheckedException();
+        exceptionServise.throwUncheckedException();
 //        throw new MyCastomException();
 //        try {
 //            exceptionServise.throwCheckedException();
