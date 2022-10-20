@@ -27,9 +27,9 @@ public class InitializationData {
         System.out.println("Username list: " + information.list);
         System.out.println("Mail list: " + information.mail);
         System.out.println("Map list: " + information.mailName);
-        System.out.println("Username list: " + information.list.size());
-        System.out.println("Mail list: " + information.mail.size());
-        System.out.println("Map list: " + information.mailName.size());
+        System.out.println("Username list size: " + information.list.size());
+        System.out.println("Mail list size: " + information.mail.size());
+        System.out.println("Map list size: " + information.mailName.size());
 
     }
 }
