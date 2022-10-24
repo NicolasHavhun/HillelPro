@@ -1,7 +1,7 @@
 package com.hillelPro.havhun.lesson4.enity;
 
 import com.hillelPro.havhun.lesson4.DedaultRule;
-import com.sun.deploy.security.ruleset.DefaultRule;
+
 
 public class Human  extends DedaultRule {
 

@@ -1,10 +1,9 @@
 package com.hillelPro.havhun.homework4;
 
-import com.hillelPro.havhun.homework4.animals.*;
-import com.hillelPro.havhun.homework4.interfaces.BehaviorAnimal;
-import com.hillelPro.havhun.homework4.interfaces.MoveAnimal;
-import com.hillelPro.havhun.homework4.interfaces.PlantGrows;
-import com.sun.javafx.runtime.async.AbstractRemoteResource;
+import com.hillelPro.havhun.homework4.animals.Cangaroo;
+import com.hillelPro.havhun.homework4.animals.Coala;
+import com.hillelPro.havhun.homework4.animals.Petauridae;
+
 
 public class Main {
     public static void main(String[] args) {
