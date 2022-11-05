@@ -9,52 +9,64 @@ import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
-        DefaultRunInterface defaultRunInterface = new DefaultRunInterface() {
-            @Override
-            public void run() {
-                System.out.println("i'm running");
-            }
-        };
+        //@FunctionalInterface - использование для своих интерфейсов:
+        //И пример использования lambda-выражений:
+
+//        final DefaultRunInterfaceImpl defaultRunInterfaceImpl = new DefaultRunInterfaceImpl();
+//        defaultRunInterfaceImpl.run();
+
+        final DefaultRunInterface defaultRunInterface = () -> System.out.println("I'm running...");
         defaultRunInterface.run();
-        final int ccalculate = calculate(10, 20);
-        int c = 10;
-        int d = 30;
 
-        List<String> stringList = Arrays.asList("one", "two", "three");
-        Object Comparator;
-        Collections.sort(stringList, (o1, o2) -> 0);
+        final int calculate = calculate(10, 230);
+//        (a, b) -> a + b;
 
-        Predicate<String> predicate = (string) -> string.trim().isBlank();
-        System.out.println(predicate.test(""));
-        System.out.println(predicate.test("string"));
-//        System.out.println(predicate.test(null));
+        final List<String> stringList = Arrays.asList("one", "two", "three");
+        Collections.sort(stringList, (o1, o2) -> o1.compareTo(o2));
 
-        final Consumer<Integer> consumer = (consumerInteger) ->
-                System.out.println("consumer get parameter" + consumerInteger);
+        //Существующие функциональные интерфейсы в Java 8:
+
+        final Predicate<String> predicate = (predicateString) -> predicateString.trim().isBlank();
+        System.out.println("predicate.test(\"\"): " + predicate.test(""));
+        System.out.println("predicate.test(\"string\"): " + predicate.test("string"));
+//        System.out.println("predicate.test(null): " + predicate.test(null));
+
+        final Consumer<Integer> consumer = (consumerInteger) -> {
+            consumerInteger %= 2;
+            System.out.println("consumer get parameter: " + consumerInteger);
+        };
         consumer.accept(1000);
+        consumer.accept(3);
 
-        final Function<Double, Boolean> function = (functionalDouble) ->
-                functionalDouble.isInfinite();
-        System.out.println("functional Double: " + function.apply(12.54));
+        final Function<Double, Boolean> function = (functionDouble) -> functionDouble.isInfinite();
+        System.out.println("function.apply(12.54): " + function.apply(12.54));
 
         final Supplier<Client> supplier = () -> new Client();
-        Client client = supplier.get();
+        final Client client = supplier.get();
 
-        final BiPredicate<String, String> biPredicate = (firstString, secondString) ->
-                firstString.length() > secondString.length();
-        System.out.println(biPredicate.test("wSDFF", "wert"));
+        final BiPredicate<String, String> biPredicate = (firstString, secondString) -> firstString.length() > secondString.length();
+        System.out.println("biPredicate.test(\"sdfsdf\", \"sdfsdgfsdgsdg\"): " + biPredicate.test("sdfsdf", "sdfsdgfsdgsdg"));
+        System.out.println("biPredicate.test(\"sdfsdgfsdgsdg\", \"sdfsdf\"): " + biPredicate.test("sdfsdgfsdgsdg", "sdfsdf"));
 
-        final BiFunction<Integer,Double, String> biFunction = (functionInt, functionDouble) ->
-                functionInt+ ""+functionDouble;
-        String Result = biFunction.apply(123, 234.45);
-        System.out.println("result: "+Result);
+        final BiFunction<Integer, Double, String> biFunction =
+                (functionInteger, functionDouble) -> functionInteger + "/" + functionDouble;
+        final String applyResult = biFunction.apply(145, 658.45);
+        System.out.println("applyResult is: " + applyResult);
 
-        final BinaryOperator<Integer> binaryOperator = (int1, int2) -> int1+int2;
+//        final Function<String, String> stringStringFunction = (str) -> str.concat("changed");
+//        final BiFunction<Integer, Integer, Integer> integerIntegerIntegerBiFunction = (int1, int2) -> int1 + int2;
+        final UnaryOperator<String> unaryOperator = (str) -> str.concat("changed");
+        final BinaryOperator<Integer> binaryOperator = (int1, int2) -> int1 + int2;
 
+        final Calculator<Integer, Long, Float, Double, String> calculator =
+                (aInteger, aLong, aFloat, aDouble) -> String.valueOf(aInteger + aLong + aFloat + aDouble);
+        final String sumString = calculator.sum(100, 500400L, 15.43F, 789.958);
+        System.out.println("sumString: " + sumString);
     }
 
-    public static int calculate(int a, int b) {
+    public static int calculate(Integer a, int b) {
         return a + b;
     }
+
 
 }
