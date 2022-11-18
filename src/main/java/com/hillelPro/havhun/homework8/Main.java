@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Helper helper = new Helper();
-        Client client = new Client("identifier", "Havhun", "0000000000", 500.00);
+        Client client = new Client("identifier", "Havhun", "0000000000", 500.0);
         TransactionService transactionService = new TransactionService();
         //       6.1
         String accountId;

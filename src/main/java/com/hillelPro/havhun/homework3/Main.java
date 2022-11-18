@@ -37,10 +37,10 @@ public class Main {
 
     public static void userValidation(User user) {
         if (user instanceof Support) {
-            ((Support) user).validationSupport(user.firstString, user.secondString);
+            Support.validationSupport(user.firstString, user.secondString);
         }
         if (user instanceof Admin) {
-            ((Admin) user).deleteSubstring(user.firstString);
+            Admin.deleteSubstring(user.firstString);
         }
 
 
